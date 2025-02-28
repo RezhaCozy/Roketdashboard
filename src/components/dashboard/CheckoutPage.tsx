@@ -189,6 +189,10 @@ const CheckoutPage = ({
                     <RadioGroupItem value="credit" id="credit" />
                     <Label htmlFor="credit">Credit Card</Label>
                   </div>
+                  <div className="flex items-center space-x-2">
+                    <RadioGroupItem value="xendit" id="xendit" />
+                    <Label htmlFor="xendit">Xendit Payment Gateway</Label>
+                  </div>
                 </RadioGroup>
 
                 {paymentMethod === "bank" && (
@@ -264,6 +268,80 @@ const CheckoutPage = ({
                     <div className="space-y-2">
                       <Label htmlFor="name-on-card">Name on Card</Label>
                       <Input id="name-on-card" placeholder="John Doe" />
+                    </div>
+                  </div>
+                )}
+
+                {paymentMethod === "xendit" && (
+                  <div className="space-y-4">
+                    <div className="bg-blue-50 p-4 rounded-lg">
+                      <h3 className="font-medium text-blue-800 mb-2">
+                        Xendit Payment Gateway
+                      </h3>
+                      <p className="text-sm text-blue-700 mb-4">
+                        Choose from multiple payment methods powered by Xendit
+                      </p>
+
+                      <div className="grid grid-cols-2 gap-3 mb-4">
+                        <div className="border rounded-lg p-3 flex items-center gap-2 bg-white cursor-pointer hover:border-primary">
+                          <img
+                            src="https://xendit.co/wp-content/uploads/2020/12/BCA-1.png"
+                            alt="BCA"
+                            className="h-6"
+                          />
+                          <span className="text-sm">BCA Virtual Account</span>
+                        </div>
+                        <div className="border rounded-lg p-3 flex items-center gap-2 bg-white cursor-pointer hover:border-primary">
+                          <img
+                            src="https://xendit.co/wp-content/uploads/2020/12/Mandiri-1.png"
+                            alt="Mandiri"
+                            className="h-6"
+                          />
+                          <span className="text-sm">
+                            Mandiri Virtual Account
+                          </span>
+                        </div>
+                        <div className="border rounded-lg p-3 flex items-center gap-2 bg-white cursor-pointer hover:border-primary">
+                          <img
+                            src="https://xendit.co/wp-content/uploads/2020/12/BNI-1.png"
+                            alt="BNI"
+                            className="h-6"
+                          />
+                          <span className="text-sm">BNI Virtual Account</span>
+                        </div>
+                        <div className="border rounded-lg p-3 flex items-center gap-2 bg-white cursor-pointer hover:border-primary">
+                          <img
+                            src="https://xendit.co/wp-content/uploads/2020/12/BRI-1.png"
+                            alt="BRI"
+                            className="h-6"
+                          />
+                          <span className="text-sm">BRI Virtual Account</span>
+                        </div>
+                      </div>
+
+                      <div className="grid grid-cols-3 gap-3">
+                        <div className="border rounded-lg p-3 flex items-center justify-center bg-white cursor-pointer hover:border-primary">
+                          <img
+                            src="https://xendit.co/wp-content/uploads/2020/12/OVO.png"
+                            alt="OVO"
+                            className="h-6"
+                          />
+                        </div>
+                        <div className="border rounded-lg p-3 flex items-center justify-center bg-white cursor-pointer hover:border-primary">
+                          <img
+                            src="https://xendit.co/wp-content/uploads/2020/12/Dana.png"
+                            alt="DANA"
+                            className="h-6"
+                          />
+                        </div>
+                        <div className="border rounded-lg p-3 flex items-center justify-center bg-white cursor-pointer hover:border-primary">
+                          <img
+                            src="https://xendit.co/wp-content/uploads/2020/12/Linkaja.png"
+                            alt="LinkAja"
+                            className="h-6"
+                          />
+                        </div>
+                      </div>
                     </div>
                   </div>
                 )}

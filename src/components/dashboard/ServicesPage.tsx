@@ -23,6 +23,7 @@ import { Separator } from "../ui/separator";
 import { Input } from "../ui/input";
 import { Label } from "../ui/label";
 import { ScrollArea } from "../ui/scroll-area";
+import { Checkbox } from "../ui/checkbox";
 
 interface Service {
   id: string;
@@ -459,6 +460,37 @@ const ServicesPage = ({ services = defaultServices }: ServicesPageProps) => {
                     <span className="text-lg font-bold text-primary">
                       IDR {calculateTotal().toLocaleString()}
                     </span>
+                  </div>
+
+                  {/* Bundle Options */}
+                  <div className="mt-6 p-4 border rounded-lg bg-gray-50">
+                    <h3 className="font-medium mb-3">Bundle Options</h3>
+                    <div className="space-y-3">
+                      <div className="flex items-center space-x-2">
+                        <Checkbox id="bundle-discount" />
+                        <Label htmlFor="bundle-discount" className="text-sm">
+                          Apply 10% Bundle Discount
+                        </Label>
+                      </div>
+                      <div className="flex items-center space-x-2">
+                        <Checkbox id="express-delivery" />
+                        <Label htmlFor="express-delivery" className="text-sm">
+                          Express Delivery (+IDR 150,000)
+                        </Label>
+                      </div>
+                      <div className="flex items-center space-x-2">
+                        <Checkbox id="premium-support" />
+                        <Label htmlFor="premium-support" className="text-sm">
+                          Premium Support Package (+IDR 200,000)
+                        </Label>
+                      </div>
+                      <div className="flex items-center space-x-2">
+                        <Checkbox id="seo-package" />
+                        <Label htmlFor="seo-package" className="text-sm">
+                          SEO Optimization Package (+IDR 350,000)
+                        </Label>
+                      </div>
+                    </div>
                   </div>
 
                   <div className="space-y-2">

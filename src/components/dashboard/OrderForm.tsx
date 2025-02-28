@@ -116,6 +116,38 @@ const OrderForm = ({ selectedService, onClose }: OrderFormProps) => {
               />
             </div>
 
+            {/* LP Builder Options - Only for Landing Page services */}
+            {selectedService &&
+              selectedService.title.toLowerCase().includes("landingpage") && (
+                <div className="space-y-2 mt-4">
+                  <Label htmlFor="lp-builder">LP Builder (Optional)</Label>
+                  <RadioGroup defaultValue="elementor">
+                    <div className="grid grid-cols-2 gap-2">
+                      <div className="flex items-center space-x-2 border rounded-md p-2">
+                        <RadioGroupItem value="elementor" id="elementor" />
+                        <Label htmlFor="elementor">Elementor</Label>
+                      </div>
+                      <div className="flex items-center space-x-2 border rounded-md p-2">
+                        <RadioGroupItem value="berdu" id="berdu" />
+                        <Label htmlFor="berdu">Berdu</Label>
+                      </div>
+                      <div className="flex items-center space-x-2 border rounded-md p-2">
+                        <RadioGroupItem value="everpro" id="everpro" />
+                        <Label htmlFor="everpro">Everpro</Label>
+                      </div>
+                      <div className="flex items-center space-x-2 border rounded-md p-2">
+                        <RadioGroupItem value="scalev" id="scalev" />
+                        <Label htmlFor="scalev">Scalev</Label>
+                      </div>
+                      <div className="flex items-center space-x-2 border rounded-md p-2">
+                        <RadioGroupItem value="orderonline" id="orderonline" />
+                        <Label htmlFor="orderonline">Orderonline</Label>
+                      </div>
+                    </div>
+                  </RadioGroup>
+                </div>
+              )}
+
             {/* Payment Method */}
             <div className="space-y-3">
               <h3 className="font-semibold text-sm">Payment Method</h3>
